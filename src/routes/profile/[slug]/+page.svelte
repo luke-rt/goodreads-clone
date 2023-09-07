@@ -6,7 +6,7 @@
 
 <section class="profile">
     <h1>{profile.full_name}</h1>
-    {#if session.user.id == params.slug}
+    {#if session?.user.id == params.slug}
         <a href="/profile/edit">Edit Profile</a>
     {/if}
     <h2>Stats</h2>

@@ -9,17 +9,19 @@
 <h2>{book.authors.join(", ")}</h2>
 <p>{book.desc}</p>
 
-<form
-    method="post"
-    action={read ? "?/delete" : "?/add"}
->
-    <button
-        id = "read-btn"
-        class:read = {read}
+{#if session}
+    <form
+        method="post"
+        action={read ? "?/delete" : "?/add"}
     >
-        {read ? "Read ✓" : "Not Read (yet)"}
-    </button>
-</form>
+        <button
+            id = "read-btn"
+            class:read = {read}
+        >
+            {read ? "Read ✓" : "Not Read (yet)"}
+        </button>
+    </form>
+{/if}
 
 <style lang="scss">
     h2 {

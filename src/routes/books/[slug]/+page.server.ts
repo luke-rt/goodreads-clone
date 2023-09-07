@@ -12,7 +12,7 @@ export const load = async ({ params, locals: { supabase, getSession } }) => {
 	const { data } = await supabase
 		.from('rel_profiles_books')
 		.select()
-		.eq('profile_id', session.user.id)
+		.eq('profile_id', session?.user.id)
 		.eq('book_id', params.slug)
 		.single();
 	
@@ -28,7 +28,7 @@ export const actions = {
 		const session = await getSession();
 		
 		const { error } = await supabase.from('rel_profiles_books').upsert({
-			profile_id: session.user.id,
+			profile_id: session?.user.id,
 			book_id: params.slug,
 		})
 
@@ -42,7 +42,7 @@ export const actions = {
 		const { error } = await supabase
 			.from('rel_profiles_books')
 			.delete()
-			.eq('profile_id', session.user.id)
+			.eq('profile_id', session?.user.id)
 			.eq('book_id', params.slug);
 
 		if (error) {
