@@ -7,7 +7,7 @@ It is a web app that has a list of books and their titles, authors, and descript
 Profiles - Once you make an account, you can save a list of the books you have read that connects with your account
 
 3. How much time you spent developing this project
-6hrs
+6hrs, and I spent a lot less time styling than I normally do with websites due to the amount of homework I had that week, which is one area which I would improve if I worked with Penn Spark
 
 4. Details for running your project — choose one of the following
 Deploy your project live:
